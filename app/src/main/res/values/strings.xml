@@ -1,0 +1,121 @@
+<resources>
+    <string name="app_name">Tab_layout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bubble_sort_c">
+
+#include&lt;stdio.h&gt;\n
+        void bubbleSort(int array[], int size) {\n
+        \t for (int step = 0; step &lt; size - 1; ++step) {\n
+         \t \t  for (int i = 0; i &lt; size - step - 1; ++i) {\n
+         \t  \t  \t if (array[i] &gt; array[i + 1]) {\n
+
+        \t  \t  \t  \t  int temp = array[i];\n
+       \t  \t  \t  \t   array[i] = array[i + 1];\n
+       \t  \t  \t  \t   array[i + 1] = temp;\n
+      \t  \t  \t  }\n
+   \t  \t   }\n
+  \t  }\n
+}\n
+
+
+void printArray(int array[], int size) {\n
+   \t for (int i = 0; i &lt; size; ++i) {\n
+    \t  \t  printf(\"%d  \", array[i]);\n
+  }\n
+  \t  printf(\"\\n\");\n
+}\n
+
+int main() {\n
+   \t int data[] = {-2, 45, 0, 11, -9};\n
+
+         \t int size = sizeof(data) / sizeof(data[0]);\n
+         \t bubbleSort(data, size);\n
+
+  \t printf(\"Sorted Array in Ascending Order:\");\n
+  \t printArray(data, size);\n
+}
+    </string>
+    <string name="bubble_sort_cpp">
+
+#include&lt;iostream&gt;\n
+using namespace std;\n
+
+
+void bubbleSort(int array[], int size) {\n
+
+
+  \t for (int step = 0; step &lt; size; ++step) {\n
+
+
+    \t\t for (int i = 0; i &lt; size - step; ++i) {\n
+
+
+
+           \t\t\t if (array[i] &gt; array[i + 1]) {\n
+
+
+
+      \t\t\t\t  int temp = array[i];\n
+        \t\t\t\t array[i] = array[i + 1];\n
+        \t\t\t\t array[i + 1] = temp;\n
+     \t\t\t }\n
+    \t\t}\n
+ \t }\n
+}\n
+
+
+void printArray(int array[], int size) {\n
+  \tfor (int i = 0; i &lt; size; ++i) {\n
+   \t\t cout &lt;&lt; \"  \" &lt;&lt; array[i];\n
+ \t }\n
+ \t\t cout &lt;&lt; \"\\n\";\n
+}\n
+
+int main() {\n
+  \t int data[] = {-2, 45, 0, 11, -9};\n
+        \t int size = sizeof(data) / sizeof(data[0]);\n
+        \t bubbleSort(data, size);\n
+
+  \t cout &lt;&lt; \"Sorted Array in Ascending Order:\";\n
+ \t  printArray(data, size);\n
+}
+    </string>
+    <string name="bubble_sort_java">
+
+import java.util.Arrays;\n
+        class Main {\n
+
+
+  \tstatic void bubbleSort(int array[]) {\n
+    \t\tint size = array.length;\n
+
+
+    \tfor (int i = 0; i &lt;  size - 1; i++)\n
+
+
+    \t\t\t  for (int j = 0; j &lt; size - i - 1; j++)\n
+
+
+         \t\t\t\t   if (array[j] &gt; array[j + 1]) {\n
+
+
+
+         \t\t\t\t int temp = array[j];\n
+         \t\t\t\t  array[j] = array[j + 1];\n
+         \t\t\t\t  array[j + 1] = temp;\n
+     \t \t }\n
+ \t }\n
+
+  public static void main(String args[]) {\n
+
+    \tint[] data = { -2, 45, 0, 11, -9 };\n
+
+
+   \t Main.bubbleSort(data);\n
+
+   \t\t System.out.println(\"Sorted Array in Ascending Order:\");\n
+   \t\t System.out.println(Arrays.toString(data));\n
+  \t}\n
+}</string>
+</resources>
